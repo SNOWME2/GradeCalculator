@@ -44,7 +44,7 @@ Sub Globals
 	Private ASFlowTabMenu1 As ASFlowTabMenu
 	Private Panel1 As Panel
 	Private Panel2 As Panel
-	Private ScrollView1 As ScrollView
+
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
