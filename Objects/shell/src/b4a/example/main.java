@@ -60,9 +60,8 @@ public static RemoteObject _homepanel = RemoteObject.declareNull("anywheresoftwa
 public static RemoteObject _asflowtabmenu1 = RemoteObject.declareNull("b4a.example.asflowtabmenu");
 public static RemoteObject _panel1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 public static RemoteObject _panel2 = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
-public static RemoteObject _scrollview1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.ScrollViewWrapper");
 public static b4a.example.starter _starter = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",main.mostCurrent._activity,"ASFlowTabMenu1",main.mostCurrent._asflowtabmenu1,"HomePanel",main.mostCurrent._homepanel,"Panel1",main.mostCurrent._panel1,"Panel2",main.mostCurrent._panel2,"ScrollView1",main.mostCurrent._scrollview1,"Starter",Debug.moduleToString(b4a.example.starter.class),"xui",main._xui};
+		return new Object[] {"Activity",main.mostCurrent._activity,"ASFlowTabMenu1",main.mostCurrent._asflowtabmenu1,"HomePanel",main.mostCurrent._homepanel,"Panel1",main.mostCurrent._panel1,"Panel2",main.mostCurrent._panel2,"Starter",Debug.moduleToString(b4a.example.starter.class),"xui",main._xui};
 }
 }

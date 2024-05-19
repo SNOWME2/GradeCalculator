@@ -1,15 +1,17 @@
 ﻿Build1=Default,b4a.example
-File1=CalcuPanel.bal
-File2=Layout.bal
-FileGroup1=Default Group
+File1=CALCU.png
+File2=CalcuPanel.bal
+File3=Layout.bal
+FileGroup1=New Group
 FileGroup2=Default Group
+FileGroup3=Default Group
 Group=Default Group
-Library1=core
-Library2=xui
-Library3=asflowtabmenu
+Library1=asflowtabmenu
+Library2=core
+Library3=xui
 ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
 Module1=Starter
-NumberOfFiles=2
+NumberOfFiles=3
 NumberOfLibraries=3
 NumberOfModules=1
 Version=12.8
@@ -45,15 +47,18 @@ Sub Globals
 	Private Panel1 As Panel
 	Private Panel2 As Panel
 
+
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	Activity.LoadLayout("Layout")
 	
+
+	
 	ASFlowTabMenu1.AddTab(ASFlowTabMenu1.FontToBitmap(Chr(0xE88A),True,25,xui.Color_White),"Home")
 	ASFlowTabMenu1.AddTab(ASFlowTabMenu1.FontToBitmap(Chr(0xE5C3),True,25,xui.Color_White),"Calcu")
 	ASFlowTabMenu1.AddTab(ASFlowTabMenu1.FontToBitmap(Chr(0xE88E),True,25,xui.Color_White),"About")
-	
+
 
 End Sub
 
@@ -71,7 +76,6 @@ End Sub
 Sub Button1_Click
 	
 End Sub
-
 
 
 

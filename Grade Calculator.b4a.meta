@@ -4,6 +4,6 @@ ModuleBreakpoints0=
 ModuleBreakpoints1=
 ModuleClosedNodes0=
 ModuleClosedNodes1=1
-NavigationStack=Main,Activity_Pause,45,0,Main,Button1_Click,50,6,Main,Process_Globals,20,0,Main,ASFlowTabMenu1_TabClick,88,6,Visual Designer,CalcuPanel.bal,-100,1,Visual Designer,Layout.bal,-100,6,Main,Activity_Create,36,6,Main,Globals,30,0
+NavigationStack=Main,Activity_Pause,45,0,Main,ASFlowTabMenu1_TabClick,88,6,Visual Designer,CalcuPanel.bal,-100,3,Main,Process_Globals,14,0,Main,Activity_Resume,46,0,Main,Button1_Click,56,6,Main,Globals,31,0,Visual Designer,Layout.bal,-100,6,Main,Activity_Create,40,6
 SelectedBuild=0
 VisibleModules=1

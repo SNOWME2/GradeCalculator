@@ -382,7 +382,6 @@ public anywheresoftware.b4a.objects.PanelWrapper _homepanel = null;
 public b4a.example.asflowtabmenu _asflowtabmenu1 = null;
 public anywheresoftware.b4a.objects.PanelWrapper _panel1 = null;
 public anywheresoftware.b4a.objects.PanelWrapper _panel2 = null;
-public anywheresoftware.b4a.objects.ScrollViewWrapper _scrollview1 = null;
 public b4a.example.starter _starter = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="main";
@@ -393,17 +392,17 @@ RDebugUtils.currentLine=131072;
 RDebugUtils.currentLine=131073;
  //BA.debugLineNum = 131073;BA.debugLine="Activity.LoadLayout(\"Layout\")";
 mostCurrent._activity.LoadLayout("Layout",mostCurrent.activityBA);
-RDebugUtils.currentLine=131075;
- //BA.debugLineNum = 131075;BA.debugLine="ASFlowTabMenu1.AddTab(ASFlowTabMenu1.FontToBitmap";
-mostCurrent._asflowtabmenu1._addtab /*String*/ (null,mostCurrent._asflowtabmenu1._fonttobitmap /*anywheresoftware.b4a.objects.B4XViewWrapper.B4XBitmapWrapper*/ (null,BA.ObjectToString(anywheresoftware.b4a.keywords.Common.Chr(((int)0xe88a))),anywheresoftware.b4a.keywords.Common.True,(float) (25),_xui.Color_White),"Home");
-RDebugUtils.currentLine=131076;
- //BA.debugLineNum = 131076;BA.debugLine="ASFlowTabMenu1.AddTab(ASFlowTabMenu1.FontToBitmap";
-mostCurrent._asflowtabmenu1._addtab /*String*/ (null,mostCurrent._asflowtabmenu1._fonttobitmap /*anywheresoftware.b4a.objects.B4XViewWrapper.B4XBitmapWrapper*/ (null,BA.ObjectToString(anywheresoftware.b4a.keywords.Common.Chr(((int)0xe5c3))),anywheresoftware.b4a.keywords.Common.True,(float) (25),_xui.Color_White),"Calcu");
 RDebugUtils.currentLine=131077;
  //BA.debugLineNum = 131077;BA.debugLine="ASFlowTabMenu1.AddTab(ASFlowTabMenu1.FontToBitmap";
+mostCurrent._asflowtabmenu1._addtab /*String*/ (null,mostCurrent._asflowtabmenu1._fonttobitmap /*anywheresoftware.b4a.objects.B4XViewWrapper.B4XBitmapWrapper*/ (null,BA.ObjectToString(anywheresoftware.b4a.keywords.Common.Chr(((int)0xe88a))),anywheresoftware.b4a.keywords.Common.True,(float) (25),_xui.Color_White),"Home");
+RDebugUtils.currentLine=131078;
+ //BA.debugLineNum = 131078;BA.debugLine="ASFlowTabMenu1.AddTab(ASFlowTabMenu1.FontToBitmap";
+mostCurrent._asflowtabmenu1._addtab /*String*/ (null,mostCurrent._asflowtabmenu1._fonttobitmap /*anywheresoftware.b4a.objects.B4XViewWrapper.B4XBitmapWrapper*/ (null,BA.ObjectToString(anywheresoftware.b4a.keywords.Common.Chr(((int)0xe5c3))),anywheresoftware.b4a.keywords.Common.True,(float) (25),_xui.Color_White),"Calcu");
+RDebugUtils.currentLine=131079;
+ //BA.debugLineNum = 131079;BA.debugLine="ASFlowTabMenu1.AddTab(ASFlowTabMenu1.FontToBitmap";
 mostCurrent._asflowtabmenu1._addtab /*String*/ (null,mostCurrent._asflowtabmenu1._fonttobitmap /*anywheresoftware.b4a.objects.B4XViewWrapper.B4XBitmapWrapper*/ (null,BA.ObjectToString(anywheresoftware.b4a.keywords.Common.Chr(((int)0xe88e))),anywheresoftware.b4a.keywords.Common.True,(float) (25),_xui.Color_White),"About");
-RDebugUtils.currentLine=131080;
- //BA.debugLineNum = 131080;BA.debugLine="End Sub";
+RDebugUtils.currentLine=131082;
+ //BA.debugLineNum = 131082;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
@@ -428,48 +427,48 @@ public static String  _asflowtabmenu1_tabclick(int _index) throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "asflowtabmenu1_tabclick", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "asflowtabmenu1_tabclick", new Object[] {_index}));}
-RDebugUtils.currentLine=3473408;
- //BA.debugLineNum = 3473408;BA.debugLine="Private Sub ASFlowTabMenu1_TabClick(index As Int)";
-RDebugUtils.currentLine=3473409;
- //BA.debugLineNum = 3473409;BA.debugLine="Select Case index";
+RDebugUtils.currentLine=393216;
+ //BA.debugLineNum = 393216;BA.debugLine="Private Sub ASFlowTabMenu1_TabClick(index As Int)";
+RDebugUtils.currentLine=393217;
+ //BA.debugLineNum = 393217;BA.debugLine="Select Case index";
 switch (_index) {
 case 0: {
-RDebugUtils.currentLine=3473411;
- //BA.debugLineNum = 3473411;BA.debugLine="HomePanel.SetLayoutAnimated(375, 0, HomePanel.t";
+RDebugUtils.currentLine=393219;
+ //BA.debugLineNum = 393219;BA.debugLine="HomePanel.SetLayoutAnimated(375, 0, HomePanel.t";
 mostCurrent._homepanel.SetLayoutAnimated((int) (375),(int) (0),mostCurrent._homepanel.getTop(),mostCurrent._homepanel.getWidth(),mostCurrent._homepanel.getHeight());
-RDebugUtils.currentLine=3473412;
- //BA.debugLineNum = 3473412;BA.debugLine="Panel1.SetLayoutAnimated(375, 100%x, HomePanel.";
+RDebugUtils.currentLine=393220;
+ //BA.debugLineNum = 393220;BA.debugLine="Panel1.SetLayoutAnimated(375, 100%x, HomePanel.";
 mostCurrent._panel1.SetLayoutAnimated((int) (375),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),mostCurrent._homepanel.getTop(),mostCurrent._homepanel.getWidth(),mostCurrent._homepanel.getHeight());
-RDebugUtils.currentLine=3473414;
- //BA.debugLineNum = 3473414;BA.debugLine="Panel2.SetLayoutAnimated(375, 200%x, HomePanel.";
+RDebugUtils.currentLine=393222;
+ //BA.debugLineNum = 393222;BA.debugLine="Panel2.SetLayoutAnimated(375, 200%x, HomePanel.";
 mostCurrent._panel2.SetLayoutAnimated((int) (375),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (200),mostCurrent.activityBA),mostCurrent._homepanel.getTop(),mostCurrent._homepanel.getWidth(),mostCurrent._homepanel.getHeight());
  break; }
 case 1: {
-RDebugUtils.currentLine=3473421;
- //BA.debugLineNum = 3473421;BA.debugLine="HomePanel.SetLayoutAnimated(375, -100%x, Panel1";
+RDebugUtils.currentLine=393225;
+ //BA.debugLineNum = 393225;BA.debugLine="HomePanel.SetLayoutAnimated(375, -100%x, Panel1";
 mostCurrent._homepanel.SetLayoutAnimated((int) (375),(int) (-anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA)),mostCurrent._panel1.getTop(),mostCurrent._panel1.getWidth(),mostCurrent._panel1.getHeight());
-RDebugUtils.currentLine=3473423;
- //BA.debugLineNum = 3473423;BA.debugLine="Panel1.SetLayoutAnimated(375, 0, Panel1.top, Pa";
+RDebugUtils.currentLine=393227;
+ //BA.debugLineNum = 393227;BA.debugLine="Panel1.SetLayoutAnimated(375, 0, Panel1.top, Pa";
 mostCurrent._panel1.SetLayoutAnimated((int) (375),(int) (0),mostCurrent._panel1.getTop(),mostCurrent._panel1.getWidth(),mostCurrent._panel1.getHeight());
-RDebugUtils.currentLine=3473425;
- //BA.debugLineNum = 3473425;BA.debugLine="Panel2.SetLayoutAnimated(375, 100%x, Panel1.top";
+RDebugUtils.currentLine=393229;
+ //BA.debugLineNum = 393229;BA.debugLine="Panel2.SetLayoutAnimated(375, 100%x, Panel1.top";
 mostCurrent._panel2.SetLayoutAnimated((int) (375),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),mostCurrent._panel1.getTop(),mostCurrent._panel1.getWidth(),mostCurrent._panel1.getHeight());
  break; }
 case 2: {
-RDebugUtils.currentLine=3473429;
- //BA.debugLineNum = 3473429;BA.debugLine="Panel2.SetLayoutAnimated(375, 0, Panel2.top, Pa";
+RDebugUtils.currentLine=393233;
+ //BA.debugLineNum = 393233;BA.debugLine="Panel2.SetLayoutAnimated(375, 0, Panel2.top, Pa";
 mostCurrent._panel2.SetLayoutAnimated((int) (375),(int) (0),mostCurrent._panel2.getTop(),mostCurrent._panel2.getWidth(),mostCurrent._panel2.getHeight());
-RDebugUtils.currentLine=3473430;
- //BA.debugLineNum = 3473430;BA.debugLine="HomePanel.SetLayoutAnimated(375, -200%x, Panel2";
+RDebugUtils.currentLine=393234;
+ //BA.debugLineNum = 393234;BA.debugLine="HomePanel.SetLayoutAnimated(375, -200%x, Panel2";
 mostCurrent._homepanel.SetLayoutAnimated((int) (375),(int) (-anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (200),mostCurrent.activityBA)),mostCurrent._panel2.getTop(),mostCurrent._panel2.getWidth(),mostCurrent._panel2.getHeight());
-RDebugUtils.currentLine=3473432;
- //BA.debugLineNum = 3473432;BA.debugLine="Panel1.SetLayoutAnimated(375, -100%x, Panel2.to";
+RDebugUtils.currentLine=393236;
+ //BA.debugLineNum = 393236;BA.debugLine="Panel1.SetLayoutAnimated(375, -100%x, Panel2.to";
 mostCurrent._panel1.SetLayoutAnimated((int) (375),(int) (-anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA)),mostCurrent._panel2.getTop(),mostCurrent._panel2.getWidth(),mostCurrent._panel2.getHeight());
  break; }
 }
 ;
-RDebugUtils.currentLine=3473436;
- //BA.debugLineNum = 3473436;BA.debugLine="End Sub";
+RDebugUtils.currentLine=393240;
+ //BA.debugLineNum = 393240;BA.debugLine="End Sub";
 return "";
 }
 public static String  _button1_click() throws Exception{
