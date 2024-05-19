@@ -4,34 +4,110 @@ b4a.example
 asflowtabmenu
 1
 asflowtabmenu
-main,activity_create,1,0,35,45
-,asflowtabmenu1,,homepanel,,panel1,,panel2,,xui
-,asflowtabmenu1,,homepanel,,panel1,,panel2
+main,activity_create,1,0,70,77
+,asflowtabmenu1,,clear,,grade1,,grade2,,grade3,,grade4,,grade5,,grade6,,grade7,,grade8,,gwa,,homepanel,,panel1,,panel2,,subtotal1,,subtotal2,,subtotal3,,subtotal4,,subtotal5,,subtotal6,,subtotal7,,subtotal8,,unit1,,unit2,,unit3,,unit4,,unit5,,unit6,,unit7,,unit8,,xui,,voice
+,asflowtabmenu1,,clear,,grade1,,grade2,,grade3,,grade4,,grade5,,grade6,,grade7,,grade8,,gwa,,homepanel,,panel1,,panel2,,subtotal1,,subtotal2,,subtotal3,,subtotal4,,subtotal5,,subtotal6,,subtotal7,,subtotal8,,unit1,,unit2,,unit3,,unit4,,unit5,,unit6,,unit7,,unit8
 asflowtabmenu,addtab,asflowtabmenu,fonttobitmap,asflowtabmenu,createlabel,asflowtabmenu,createimageview,asflowtabmenu,createasflowtabmenu_tab,asflowtabmenu,base_resize,asflowtabmenu,updatetabs,asflowtabmenu,measuretextwidth
-main,activity_pause,0,0,51,54
+main,activity_pause,0,0,84,87
 
 
 
-main,activity_resume,0,0,47,49
+main,activity_resume,0,0,80,83
+,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,calculatesubtotals,,getmissingvalue,,calculategwa
+main,calculatesubtotals,0,0,117,202
+,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,getmissingvalue,,calculategwa
+main,asflowtabmenu1_tabclick,0,0,90,115
+,homepanel,,panel1,,panel2,,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,calculatesubtotals,,getmissingvalue,,calculategwa
+main,calculategwa,0,0,204,213
+,gwa
+
+
+main,getmissingvalue,0,0,215,221
 
 
 
-main,asflowtabmenu1_tabclick,0,0,66,90
-,homepanel,,panel1,,panel2
+main,clear_click,1,0,288,306
+,unit1,,unit2,,unit3,,unit4,,unit5,,unit6,,unit7,,unit8,,grade1,,grade2,,grade3,,grade4,,grade5,,grade6,,grade7,,grade8
 
 
-main,button1_click,0,0,58,60
+main,globals,0,1,25,68
+,totalsubtotal
+,totalsubtotal
+
+main,grade1_textchanged,0,0,227,229
+,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,calculatesubtotals,,getmissingvalue,,calculategwa
+main,grade2_textchanged,0,0,235,237
+,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,calculatesubtotals,,getmissingvalue,,calculategwa
+main,grade3_textchanged,0,0,243,245
+,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,calculatesubtotals,,getmissingvalue,,calculategwa
+main,grade4_textchanged,0,0,251,253
+,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,calculatesubtotals,,getmissingvalue,,calculategwa
+main,grade5_textchanged,0,0,259,261
+,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,calculatesubtotals,,getmissingvalue,,calculategwa
+main,grade6_textchanged,0,0,267,269
+,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,calculatesubtotals,,getmissingvalue,,calculategwa
+main,grade7_textchanged,0,0,275,277
+,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,calculatesubtotals,,getmissingvalue,,calculategwa
+main,grade8_textchanged,0,0,283,285
+,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,calculatesubtotals,,getmissingvalue,,calculategwa
+main,process_globals,0,1,15,23
 
 
 
-main,globals,0,1,24,33
-
-
-
-main,process_globals,0,1,15,22
-
-
-
+main,unit1_textchanged,0,0,223,225
+,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,calculatesubtotals,,getmissingvalue,,calculategwa
+main,unit2_textchanged,0,0,231,233
+,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,calculatesubtotals,,getmissingvalue,,calculategwa
+main,unit3_textchanged,0,0,239,241
+,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,calculatesubtotals,,getmissingvalue,,calculategwa
+main,unit4_textchanged,0,0,247,249
+,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,calculatesubtotals,,getmissingvalue,,calculategwa
+main,unit5_textchanged,0,0,255,257
+,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,calculatesubtotals,,getmissingvalue,,calculategwa
+main,unit6_textchanged,0,0,263,265
+,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,calculatesubtotals,,getmissingvalue,,calculategwa
+main,unit7_textchanged,0,0,271,273
+,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,calculatesubtotals,,getmissingvalue,,calculategwa
+main,unit8_textchanged,0,0,279,281
+,totalsubtotal,,grade1,,unit1,,g1,,u1,,subtotal1,,grade2,,unit2,,g2,,u2,,subtotal2,,grade3,,unit3,,g3,,u3,,subtotal3,,grade4,,unit4,,g4,,u4,,subtotal4,,grade5,,unit5,,g5,,u5,,subtotal5,,grade6,,unit6,,g6,,u6,,subtotal6,,grade7,,unit7,,g7,,u7,,subtotal7,,grade8,,unit8,,g8,,u8,,subtotal8,,gwa
+,totalsubtotal,,g1,,u1,,g2,,u2,,g3,,u3,,g4,,u4,,g5,,u5,,g6,,u6,,g7,,u7,,g8,,u8
+,calculatesubtotals,,getmissingvalue,,calculategwa
 asflowtabmenu,addtab,0,0,153,175
 
 

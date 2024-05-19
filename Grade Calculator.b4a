@@ -9,10 +9,11 @@ Group=Default Group
 Library1=asflowtabmenu
 Library2=core
 Library3=xui
+Library4=tts
 ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
 Module1=Starter
 NumberOfFiles=3
-NumberOfLibraries=3
+NumberOfLibraries=4
 NumberOfModules=1
 Version=12.8
 @EndOfDesignText@
@@ -37,6 +38,7 @@ Sub Process_Globals
 	
 	
 	
+	
 End Sub
 
 Sub Globals
@@ -48,39 +50,62 @@ Sub Globals
 	Private Panel2 As Panel
 
 
+	
+	Private grade1 As EditText
+	Private grade2 As EditText
+	Private grade3 As EditText
+	Private grade4 As EditText
+	Private grade5 As EditText
+	Private grade6 As EditText
+	Private grade7 As EditText
+	Private grade8 As EditText
+	Private unit1 As EditText
+	Private unit2 As EditText
+	Private unit3 As EditText
+	Private unit4 As EditText
+	Private unit6 As EditText
+	Private unit7 As EditText
+	Private unit8 As EditText
+	Private unit5 As EditText
+	Private GWA As Label
+	
+	Private u1,u2,u3,u4,u5,u6,u7,u8 As Float
+	Private g1,g2,g3,g4,g5,g6,g7,g8 As Float
+	
+	Private subtotal1 As Label
+	Private subtotal2 As Label
+	Private subtotal3 As Label
+	Private subtotal4 As Label
+	Private subtotal5 As Label
+	Private subtotal6 As Label
+	Private subtotal7 As Label
+	Private subtotal8 As Label
+	
+	Private totalSubtotal As Double = 0
+	Private voice As TTS
+	Private clear As Button
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	Activity.LoadLayout("Layout")
-	
 
-	
 	ASFlowTabMenu1.AddTab(ASFlowTabMenu1.FontToBitmap(Chr(0xE88A),True,25,xui.Color_White),"Home")
 	ASFlowTabMenu1.AddTab(ASFlowTabMenu1.FontToBitmap(Chr(0xE5C3),True,25,xui.Color_White),"Calcu")
 	ASFlowTabMenu1.AddTab(ASFlowTabMenu1.FontToBitmap(Chr(0xE88E),True,25,xui.Color_White),"About")
-
-
+	voice.Initialize("TTS")
 End Sub
+
 
 Sub Activity_Resume
+	CalculateSubtotals
 
 End Sub
-
 Sub Activity_Pause (UserClosed As Boolean)
 
 
 End Sub
 
-
-
-Sub Button1_Click
-	
-End Sub
-
-
-
-
-
+'Astab Menu (BOTTOMN MENU BAR)
 Private Sub ASFlowTabMenu1_TabClick(index As Int)
 	Select Case index
 		Case 0
@@ -95,6 +120,7 @@ Private Sub ASFlowTabMenu1_TabClick(index As Int)
 			Panel1.SetLayoutAnimated(375, 0, Panel1.top, Panel1.Width, Panel1.Height)
 			
 			Panel2.SetLayoutAnimated(375, 100%x, Panel1.top, Panel1.Width, Panel1.Height)
+			CalculateSubtotals
 			
 		Case 2
 		
@@ -107,3 +133,193 @@ Private Sub ASFlowTabMenu1_TabClick(index As Int)
 	
 End Sub
 
+Sub CalculateSubtotals
+	totalSubtotal = 0
+	Dim totalUnits As Double = 0
+    
+	If grade1.Text <> "" And unit1.Text <> "" Then
+		g1 = grade1.Text
+		u1 = unit1.Text
+		subtotal1.Text = g1 * u1
+		totalSubtotal = totalSubtotal + g1 * u1
+		totalUnits = totalUnits + u1
+	Else
+		subtotal1.Text =  GetMissingValue(grade1, unit1)
+	End If
+
+	If grade2.Text <> "" And unit2.Text <> "" Then
+		g2 = grade2.Text
+		u2 = unit2.Text
+		subtotal2.Text = g2 * u2
+		totalSubtotal = totalSubtotal + g2 * u2
+		totalUnits = totalUnits + u2
+	Else
+		subtotal2.Text =  GetMissingValue(grade2, unit2)
+	End If
+
+	If grade3.Text <> "" And unit3.Text <> "" Then
+		g3 = grade3.Text
+		u3 = unit3.Text
+		subtotal3.Text = g3 * u3
+		totalSubtotal = totalSubtotal + g3 * u3
+		totalUnits = totalUnits + u3
+	Else
+		subtotal3.Text =  GetMissingValue(grade3, unit3)
+	End If
+
+	If grade4.Text <> "" And unit4.Text <> "" Then
+		g4 = grade4.Text
+		u4 = unit4.Text
+		subtotal4.Text = g4 * u4
+		totalSubtotal = totalSubtotal + g4 * u4
+		totalUnits = totalUnits + u4
+	Else
+		subtotal4.Text = GetMissingValue(grade4, unit4)
+	End If
+
+	If grade5.Text <> "" And unit5.Text <> "" Then
+		g5 = grade5.Text
+		u5 = unit5.Text
+		subtotal5.Text = g5 * u5
+		totalSubtotal = totalSubtotal + g5 * u5
+		totalUnits = totalUnits + u5
+	Else
+		subtotal5.Text =  GetMissingValue(grade5, unit5)
+	End If
+
+	If grade6.Text <> "" And unit6.Text <> "" Then
+		g6 = grade6.Text
+		u6 = unit6.Text
+		subtotal6.Text = g6 * u6
+		totalSubtotal = totalSubtotal + g6 * u6
+		totalUnits = totalUnits + u6
+	Else
+		subtotal6.Text =  GetMissingValue(grade6, unit6)
+	End If
+
+	If grade7.Text <> "" And unit7.Text <> "" Then
+		g7 = grade7.Text
+		u7 = unit7.Text
+		subtotal7.Text = g7 * u7
+		totalSubtotal = totalSubtotal + g7 * u7
+		totalUnits = totalUnits + u7
+	Else
+		subtotal7.Text =  GetMissingValue(grade7, unit7)
+	End If
+
+	If grade8.Text <> "" And unit8.Text <> "" Then
+		g8 = grade8.Text
+		u8 = unit8.Text
+		subtotal8.Text = g8 * u8
+		totalSubtotal = totalSubtotal + g8 * u8
+		totalUnits = totalUnits + u8
+	Else
+		subtotal8.Text = GetMissingValue(grade8, unit8)
+	End If
+
+	CalculateGWA(totalSubtotal, totalUnits)
+End Sub
+
+Sub CalculateGWA(totalSub As Double, totalUnits As Double)
+	If totalUnits > 0 Then
+		
+		GWA.Text = (totalSub / totalUnits)
+		
+	Else
+		GWA.Text = "0"
+	End If
+
+End Sub
+
+Private Sub GetMissingValue(grade As EditText, unit As EditText) As String
+	If grade.Text = "" Then
+		Return unit.text 
+	Else
+		Return grade.text 
+	End If
+End Sub
+
+Private Sub unit1_TextChanged (Old As String, New As String)
+	CalculateSubtotals
+End Sub
+
+Private Sub grade1_TextChanged (Old As String, New As String)
+	CalculateSubtotals
+End Sub
+
+Private Sub unit2_TextChanged (Old As String, New As String)
+	CalculateSubtotals
+End Sub
+
+Private Sub grade2_TextChanged (Old As String, New As String)
+	CalculateSubtotals
+End Sub
+
+Private Sub unit3_TextChanged (Old As String, New As String)
+	CalculateSubtotals
+End Sub
+
+Private Sub grade3_TextChanged (Old As String, New As String)
+	CalculateSubtotals
+End Sub
+
+Private Sub unit4_TextChanged (Old As String, New As String)
+	CalculateSubtotals
+End Sub
+
+Private Sub grade4_TextChanged (Old As String, New As String)
+	CalculateSubtotals
+End Sub
+
+Private Sub unit5_TextChanged (Old As String, New As String)
+	CalculateSubtotals
+End Sub
+
+Private Sub grade5_TextChanged (Old As String, New As String)
+	CalculateSubtotals
+End Sub
+
+Private Sub unit6_TextChanged (Old As String, New As String)
+	CalculateSubtotals
+End Sub
+
+Private Sub grade6_TextChanged (Old As String, New As String)
+	CalculateSubtotals
+End Sub
+
+Private Sub unit7_TextChanged (Old As String, New As String)
+	CalculateSubtotals
+End Sub
+
+Private Sub grade7_TextChanged (Old As String, New As String)
+	CalculateSubtotals
+End Sub
+
+Private Sub unit8_TextChanged (Old As String, New As String)
+	CalculateSubtotals
+End Sub
+
+Private Sub grade8_TextChanged (Old As String, New As String)
+	CalculateSubtotals
+End Sub
+
+
+Private Sub clear_Click
+	unit1.Text=""
+	unit2.Text=""
+	unit3.Text=""
+	unit4.Text=""
+	unit5.Text=""
+	unit6.Text=""
+	unit7.Text=""
+	unit8.Text=""
+	
+	grade1.Text=""
+	grade2.Text=""
+	grade3.Text=""
+	grade4.Text=""
+	grade5.Text=""
+	grade6.Text=""
+	grade7.Text=""
+	grade8.Text=""
+End Sub
